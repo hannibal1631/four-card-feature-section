@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body {
+  font-family: 'Poppins';
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--Very-Light-Gray);
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 35px auto 100px auto;
+  max-width: 1400px;
+  width: 90%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'hero hero hero'
+    'card-one card-two card-three'
+    'card-one card-two card-three';
+}
+
+/* ------hero section------ */
+
+.hero {
+  grid-area: hero;
+  text-align: center;
+  padding: 20px 354px;
+}
+
+.heading-one {
+  font-size: 35px;
+  font-weight: 300;
+  color: hsla(234, 12%, 34%, 0.7);
+}
+
+.heading-two {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--Very-Dark-Blue);
+}
+
+.hero-para {
+  font-size: 17px;
+  font-weight: 300;
+  margin-top: 25px;
+  color: var(--Grayish-Blue);
+}
+
+/* ------cards section------ */
+
+.card-one {
+  grid-area: card-one;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 35px 30px;
+  position: relative;
+  background: white;
+  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.1),
+    0px 6px 20px 0 rgba(0, 0, 0, 0.1);
+  border-top: 4px solid var(--Cyan);
+  border-radius: 8px;
+  width: 375px;
+}
+
+.card-icon {
+  height: 65px;
+  width: 65px;
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.card-two {
+  grid-area: card-two;
+}
+
+.card-two-top,
+.card-two-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 35px 30px;
+  position: relative;
+  background: white;
+  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.1),
+    0px 6px 20px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 375px;
+}
+
+.card-two-top {
+  border-top: 4px solid var(--Red);
+  margin-bottom: 45px;
+}
+
+.card-two-bottom {
+  border-top: 4px solid var(--Orange);
+}
+
+.card-three {
+  grid-area: card-three;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 35px 30px;
+  position: relative;
+  background: white;
+  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.1),
+    0px 6px 20px 0 rgba(0, 0, 0, 0.1);
+  border-top: 4px solid var(--Blue);
+  border-radius: 8px;
+  width: 375px;
+}
+
+.card-heading {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--Very-Dark-Blue);
+}
+
+.card-para {
+  font-size: 15px;
+  margin-bottom: 50px;
+  margin-right: 81px;
+  color: var(--Grayish-Blue);
+}
+/* media responsiveness */
+
+@media (max-width: 575px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 475px;
+    margin: 35px auto;
+  }
+  .hero {
+    padding: 20px 57px;
+    margin-bottom: 50px;
+  }
+  .heading-one {
+    font-size: 27px;
+  }
+  .heading-two {
+    font-size: 27px;
+  }
+  .card-one {
+    margin-bottom: 25px;
+  }
+  .card-two-top {
+    margin-bottom: 25px;
+  }
+  .card-two-bottom {
+    margin-bottom: 25px;
+  }
+}
